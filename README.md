@@ -1,2 +1,2 @@
-# STACK
-This is a general concepts of using stack in managing datas
+# STACK And QUEUE
+This is a general concepts of using stack and queue in managing datas
