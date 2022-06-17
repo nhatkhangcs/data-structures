@@ -45,13 +45,25 @@ int main() {
 	myTree.root->left->right = nullptr;
 	myTree.root->right = new Node;
 	myTree.root->right->data = 15;
-	myTree.root->right->left = nullptr;
-	myTree.root->right->right = nullptr;
+	myTree.root->right->left = new Node;
+	myTree.root->right->right = new Node;
+	myTree.root->right->left->data = 25;
+	myTree.root->right->right->data = 50;
+	myTree.root->right->left->left = nullptr;
+	myTree.root->right->left->right = nullptr;
+	myTree.root->right->right->left = nullptr;
+	myTree.root->right->right->right = nullptr;
 
+	cout << "Preorder-Traversal of Tree is: " << '\n';
 	NLRtreeTraversal(myTree.root);
 	cout << '\n';
+
+	cout << "Inorder-Traversal of Tree is: " << '\n';
 	LNRtreeTraversal(myTree.root);
 	cout << '\n';
+
+	cout << "Postorder-Traversal of Tree is: " << '\n';
 	LRNtreeTraversal(myTree.root);
-	cout << '\n';
+
+	return 0;
 }
