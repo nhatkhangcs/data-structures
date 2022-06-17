@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+struct Node{
+	int data;
+	Node* left;
+	Node* right;
+};
+
+struct BinaryTree {
+	Node* root;
+};
+
+void NLRtreeTraversal(Node* temp) {
+	if (temp != nullptr) {
+		cout << temp->data << '\n';
+		NLRtreeTraversal(temp->left);
+		NLRtreeTraversal(temp->right);
+	}
+}
+
+void LNRtreeTraversal(Node* temp) {
+	if (temp != nullptr) {
+		NLRtreeTraversal(temp->left);
+		cout << temp->data << '\n';
+		NLRtreeTraversal(temp->right);
+	}
+}
+
+void LRNtreeTraversal(Node* temp) {
+	if (temp != nullptr) {
+		NLRtreeTraversal(temp->left);
+		NLRtreeTraversal(temp->right);
+		cout << temp->data << '\n';
+	}
+}
+
+int main() {
+	BinaryTree myTree;
+	myTree.root = new Node;
+	myTree.root->data = 5;
+	myTree.root->left = new Node;
+	myTree.root->left->data = 10;
+	myTree.root->left->left = nullptr;
+	myTree.root->left->right = nullptr;
+	myTree.root->right = new Node;
+	myTree.root->right->data = 15;
+	myTree.root->right->left = nullptr;
+	myTree.root->right->right = nullptr;
+
+	NLRtreeTraversal(myTree.root);
+	cout << '\n';
+	LNRtreeTraversal(myTree.root);
+	cout << '\n';
+	LRNtreeTraversal(myTree.root);
+	cout << '\n';
+}
