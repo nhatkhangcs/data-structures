@@ -1,3 +1,11 @@
+/*
+    Author: Vo Hoang Nhat Khang
+    Major: Computer Science
+    College: Ho Chi Minh University of Technology
+    Field: Artificial Intelligent chaser
+    21/06/2022
+*/
+
 #include <iostream>
 #include <stack>
 // #include other headers in order to use the file
