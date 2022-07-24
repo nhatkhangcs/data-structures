@@ -1,8 +1,18 @@
-Node* newNode(int key) {
-    Node* node = new Node();
-    node->key = key;
-    node->left = NULL;
-    node->right = NULL;
-    node->height = 1;
-    return(node);
+#include <iostream>
+#include <vector>
+using namespace std;
+
+//initialize
+struct Node{
+    int key;            //Data
+    int count;          //Frequency of node
+    int height;         //tree height
+    Node* left;         //Left subtree
+    Node* right;        //right subtree
+};
+
+typedef Node* ptrNode;
+
+void Init(ptrNode& root){
+    root = NULL;
 }
