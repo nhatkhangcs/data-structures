@@ -1,7 +1,3 @@
-#include <iostream>
-#include <vector>
-using namespace std;
-
 //initialize
 struct Node{
     int key;            //Data
